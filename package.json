@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/johnasp/7-1-Sass#readme",
   "dependencies": {
+    "locomotive-scroll": "^4.1.4",
     "sass": "^1.55.0",
     "scss": "^0.2.4",
     "vite": "^3.1.8"
