@@ -7,5 +7,8 @@ export default `
         <li class="navbar__item"><a href="#about">About</a></li>
         <li class="navbar__item"><a href="#contact">Contact</a></li>
       </ul>
+      <div class="navbar__burger-btn" id="burger-btn">
+        <span></span>
+      </div>
 </nav>
 `;

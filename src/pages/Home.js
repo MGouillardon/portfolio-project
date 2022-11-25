@@ -17,5 +17,9 @@ export default {
     let navbar = await import("../components/Navbar");
     let homepage = document.getElementById("home");
     homepage.innerHTML += navbar.default;
+    let btn = document.getElementById("burger-btn");
+    btn.addEventListener("click", () => {
+      btn.classList.toggle("on");
+    });
   },
 };
