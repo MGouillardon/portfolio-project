@@ -1,5 +1,12 @@
-body {
-    font-size: 62,5%;
-    font-size: 6rem;
-    font-family: "Playfair display";
+@use '../abstracts/colors' as *;
+
+html {
+    font-size: 62.5%;
 }
+
+body {
+    font-family: "Playfair display";
+    color: $primary-text-color;
+    font-size: 1.6em;
+}
+

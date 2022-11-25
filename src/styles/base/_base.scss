@@ -1,5 +1,9 @@
+@use '../abstracts/colors' as *;
+
 section {
-    min-height: 100vh;
-    background: #252525;
+    background: $primary-background-color;
 }
 
+a {
+    color: $primary-text-color;
+}

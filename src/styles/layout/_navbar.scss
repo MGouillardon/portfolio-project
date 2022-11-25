@@ -1,0 +1,32 @@
+@use '../abstracts/mixins' as *;
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+
+    @include mq(medium) {
+        padding: 2rem;
+    }
+
+    &__name {
+        font-size: clamp(2.4rem, 2vw, 4rem);
+
+
+    }
+
+    &__list {
+        display: flex;
+        gap: 0rem;
+        font-size: clamp(1.6rem, 3vw, 3rem);
+
+        @include mq(medium) {
+            gap: 2rem;
+        }
+
+    }
+}

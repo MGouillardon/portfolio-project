@@ -1,0 +1,23 @@
+.home {
+    display: flex;
+    height: 100vh;
+
+    &__left-side {
+        background: salmon;
+        width: 50%;
+        display: grid;
+        place-content: center;
+
+        .home__title {
+            font-size: clamp(2rem, 5vw, 7rem);
+        }
+        .home__title span:last-child {
+            font-size: clamp(2rem, 6vw, 8rem);
+        }
+    }
+
+    &__right-side {
+        background: pink;
+        width: 50%;
+    }
+}
