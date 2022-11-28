@@ -8,24 +8,18 @@
     position: relative;
     overflow: hidden;
 
-
     &__left-side {
         width: 50%;
         display: grid;
         place-content: center;
 
-
         @include mq(medium) {
             width: 100%;
 
         }
-
     }
 
-
-
     &__title {
-
 
         span {
             font-size: clamp(2rem, 6vw, 11rem);
@@ -67,52 +61,10 @@
         }
     }
 
-    // &__overlay {
-    //     height: 100vh;
-    //     width: 100vw;
-    //     display: flex;
-    //     justify-content: center;
-    //     align-items: center;
-    //     position: absolute;
-    //     background: $secondary-background-color;
-    //     transform: translateY(100vh);
-    //     transition: all .5s ease-in-out;
-
-    //     &.on {
-    //         transform: translateY(0vh);
-    //     }
-
-    // }
-
-    // &__list {
-    //     display: none;
-
-    //     &.on {
-    //         display: flex;
-    //         justify-content: center;
-    //         align-items: center;
-    //         flex-direction: column;
-    //         gap: 5rem;
-
-    //     }
-    // }
-
-    // &__item {
-    //     font-size: clamp(2rem, 10vw, 10rem);
-
-    //     &>* {
-    //         color: #272727;
-    //     }
-    // }
-
     &__footer {
         position: fixed;
         width: 100%;
         bottom: 2rem;
-        
-        &.on {
-            display: none;
-        }
     }
 
     &__footer__list {

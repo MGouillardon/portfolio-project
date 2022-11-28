@@ -29,7 +29,7 @@ export default {
     let home = document.getElementById("home");
     home.innerHTML += navbar.default;
     home.innerHTML += curtain__menu.default;
-    let curtain__menu__animation = await import("../scripts/curtain__menu");
+    let curtain__menu__animation = await import("../scripts/curtain__menu__animation");
     let toggleCurtainMenu = curtain__menu__animation.default;
     toggleCurtainMenu();
 

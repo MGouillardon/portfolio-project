@@ -1,0 +1,25 @@
+@use '../abstracts/placeholders' as *;
+
+.contact {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+
+    &__content {
+        @extend %flex-center;
+        flex-direction: column;
+        gap: clamp(2rem, 4vw, 5rem);
+
+        &__text{
+            font-size: clamp(1.6rem, 2vw, 2.4rem);
+        }
+        &__mail{
+            font-size: clamp(2rem, 6vw, 7rem);
+        }
+        &__links{
+            font-size: clamp(1.6rem, 3vw, 3rem);
+        }
+    }
+}
