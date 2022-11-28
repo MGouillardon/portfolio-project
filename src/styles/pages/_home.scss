@@ -1,24 +1,72 @@
+@use '../abstracts/colors' as *;
+
 .home {
     display: flex;
     height: 100vh;
+    position: relative;
+    overflow: hidden;
 
     &__left-side {
-        background: salmon;
+        // background: salmon;
         width: 50%;
         display: grid;
         place-content: center;
 
-        .home__title {
-            font-size: clamp(2rem, 5vw, 7rem);
-        }
-        .home__title span:last-child {
-            font-size: clamp(2rem, 6vw, 8rem);
-        }
-        
+
+    }
+
+    &__title {
+        font-size: clamp(2rem, 6vw, 11rem);
+    }
+
+    &__title span:last-child {
+        font-size: clamp(2rem, 7vw, 12rem);
+    }
+
+    &__content {
+        font-size: clamp(1.6rem, 3vw, 3rem);
     }
 
     &__right-side {
-        background: pink;
+        // background: pink;
         width: 50%;
+    }
+
+    &__overlay {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        background: $secondary-background-color;
+        transform: translateY(100vh);
+        transition: all .5s ease-in-out;
+
+        &.on {
+            transform: translateY(0vh);
+        }
+
+    }
+
+    &__list {
+        display: none;
+
+        &.on {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 5rem;
+
+        }
+    }
+
+    &__item {
+        font-size: clamp(2rem, 10vw, 10rem);
+
+        &>* {
+            color: #272727;
+        }
     }
 }
