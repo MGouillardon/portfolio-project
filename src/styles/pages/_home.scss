@@ -55,6 +55,9 @@
 
     &__right-side {
         width: 50%;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
 
         @include mq(medium) {
             display: none;
