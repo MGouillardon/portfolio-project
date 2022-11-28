@@ -1,4 +1,6 @@
+@use '../abstracts/mixins' as *;
 @use '../abstracts/colors' as *;
+
 
 .home {
     display: flex;
@@ -6,67 +8,121 @@
     position: relative;
     overflow: hidden;
 
+
     &__left-side {
-        // background: salmon;
         width: 50%;
         display: grid;
         place-content: center;
 
 
+        @include mq(medium) {
+            width: 100%;
+
+        }
+
     }
+
+
 
     &__title {
-        font-size: clamp(2rem, 6vw, 11rem);
+
+
+        span {
+            font-size: clamp(2rem, 6vw, 11rem);
+
+            @include mq(medium) {
+                display: block;
+                text-align: center;
+                font-size: clamp(2rem, 10vw, 15rem);
+            }
+        }
+
+        span:last-child {
+            font-size: clamp(2rem, 7vw, 12rem);
+
+            @include mq(medium) {
+                display: block;
+                text-align: center;
+                font-size: clamp(2rem, 10vw, 15rem);
+                margin-bottom: 4rem;
+            }
+        }
     }
 
-    &__title span:last-child {
-        font-size: clamp(2rem, 7vw, 12rem);
-    }
 
-    &__content {
+    &__desc {
         font-size: clamp(1.6rem, 3vw, 3rem);
+
+        @include mq(medium) {
+            display: block;
+            text-align: center;
+        }
     }
 
     &__right-side {
-        // background: pink;
         width: 50%;
+
+        @include mq(medium) {
+            display: none;
+        }
     }
 
-    &__overlay {
-        height: 100vh;
-        width: 100vw;
+    // &__overlay {
+    //     height: 100vh;
+    //     width: 100vw;
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     position: absolute;
+    //     background: $secondary-background-color;
+    //     transform: translateY(100vh);
+    //     transition: all .5s ease-in-out;
+
+    //     &.on {
+    //         transform: translateY(0vh);
+    //     }
+
+    // }
+
+    // &__list {
+    //     display: none;
+
+    //     &.on {
+    //         display: flex;
+    //         justify-content: center;
+    //         align-items: center;
+    //         flex-direction: column;
+    //         gap: 5rem;
+
+    //     }
+    // }
+
+    // &__item {
+    //     font-size: clamp(2rem, 10vw, 10rem);
+
+    //     &>* {
+    //         color: #272727;
+    //     }
+    // }
+
+    &__footer {
+        position: fixed;
+        width: 100%;
+        bottom: 2rem;
+        
+        &.on {
+            display: none;
+        }
+    }
+
+    &__footer__list {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        background: $secondary-background-color;
-        transform: translateY(100vh);
-        transition: all .5s ease-in-out;
+        justify-content: space-around;
+        font-size: 1.6rem;
 
-        &.on {
-            transform: translateY(0vh);
-        }
-
-    }
-
-    &__list {
-        display: none;
-
-        &.on {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        @include mq(medium) {
+            text-align: center;
             flex-direction: column;
-            gap: 5rem;
-
-        }
-    }
-
-    &__item {
-        font-size: clamp(2rem, 10vw, 10rem);
-
-        &>* {
-            color: #272727;
         }
     }
 }

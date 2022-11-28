@@ -1,0 +1,43 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/colors' as *;
+
+.menu {
+
+    &__overlay {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        background: $secondary-background-color;
+        transform: translateY(100vh);
+        transition: all .5s ease-in-out;
+
+        &.on {
+            transform: translateY(0vh);
+        }
+
+    }
+
+    &__list {
+        display: none;
+
+        &.on {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 5rem;
+
+        }
+    }
+
+    &__item {
+        font-size: clamp(2rem, 10vw, 10rem);
+
+        &>* {
+            color: #272727;
+        }
+    }
+}
