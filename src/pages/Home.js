@@ -51,13 +51,19 @@ export default {
     let home = document.getElementById("home");
     home.innerHTML += navbar.default;
     home.innerHTML += curtain__menu.default;
-    let curtain__menu__animation = await import("../scripts/curtain__menu__animation");
-    let toggleCurtainMenu =  curtain__menu__animation.default;
-    toggleCurtainMenu();
+    // let curtain__menu__animation = await import("../scripts/curtain__menu__animation");
+    // let toggleCurtainMenu =  curtain__menu__animation.default;
+    // toggleCurtainMenu();
+    let btn = document.getElementById("burger-btn");
+    let menu__list = document.getElementById("menu__list-js");
+    let menu__overlay = document.getElementById("menu__overlay-js");
+    btn.addEventListener("click", () => {
+      btn.classList.toggle("on");
+      menu__list.classList.toggle("on");
+      menu__overlay.classList.toggle("on");
+    });
     let wrapper__animation = await import("../scripts/wrapper__animation");
-    console.log(wrapper__animation);
     let wrapperAnimation = wrapper__animation.default;
     wrapperAnimation();
-
   },
 };

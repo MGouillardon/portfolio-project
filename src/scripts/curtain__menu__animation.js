@@ -9,3 +9,4 @@ export default async () => {
     menu__overlay.classList.toggle("on");
   });
 };
+
