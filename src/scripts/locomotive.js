@@ -1,7 +1,10 @@
+import '../styles/main.scss'
 import LocomotiveScroll from 'locomotive-scroll';
 
-const scroll = new LocomotiveScroll({
-    el: document.querySelector('[data-scroll-container]'),
-    smooth: true
-});
 
+export default async () => {
+    const scroll = new LocomotiveScroll({
+        el: document.querySelector('[data-scroll-container]'),
+        smooth: true
+    });
+}

@@ -10,11 +10,13 @@
         justify-content: center;
         align-items: center;
         position: absolute;
+        z-index: -1;
         background: $secondary-background-color;
         transform: translateY(100vh);
         transition: all .5s ease-in-out;
 
         &.on {
+            z-index: 1;
             transform: translateY(0vh);
         }
 
