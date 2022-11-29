@@ -3,9 +3,15 @@
 section {
     background: $primary-background-color;
     height: 100vh;
+    position: relative;
+    overflow: hidden;
 }
 
 a {
     color: $primary-text-color;
 }
 
+p::selection, h1::selection, h2::selection, h3::selection, a::selection, div::selection, li::selection, span::selection {
+    background: $secondary-background-color;
+    color: $primary-background-color;
+}
