@@ -2,11 +2,10 @@
     aspect-ratio: 1.618;
     width: 70vmin;
     position: relative;
+    border: 2px solid #272727;
 
     &>&__shape {
-        height: 30%;
-        width: 30%;
-        background-color: rgba(0 0 0 / 0%);
+        background: #272727;
         position: absolute;
         transition: left, top, height, width, border-radius;
         transition-duration: 750ms;
@@ -14,7 +13,7 @@
     }
 
     &>&__shape:nth-child(1) {
-        background-color: #C5D8D1;
+        background-color: #ffadad;
         z-index: 2;
     }
 
@@ -24,12 +23,12 @@
     }
 
     &>&__shape:nth-child(3) {
-        background-color: #F4D1AE;
+        background-color: #ffd6a5;
         z-index: 1;
     }
 
     &>&__shape:nth-child(4) {
-        background-color: rgb(241, 91, 181);
+        background-color: #a0c4ff;
         z-index: 2;
     }
 
@@ -39,12 +38,12 @@
     }
 
     &>&__shape:nth-child(6) {
-        background-color: #7EA3CC;
+        background-color: #9bf6ff;
         z-index: 2;
     }
 
     &>&__shape:nth-child(7) {
-        background-color: #B3001B;
+        background-color: #D14081;
         z-index: 2;
     }
 
