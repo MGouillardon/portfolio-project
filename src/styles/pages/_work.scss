@@ -1,4 +1,32 @@
+@use '../abstracts/placeholders' as *;
 
-.test {
-    height: 500vh;
+.work {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__homepage {
+        height: 100vh;
+        @extend %flex-center;
+        position: relative;
+    }
+
+    &__cta-scroll {
+        position: absolute;
+        bottom: 2rem;
+        font-size: clamp(1.6rem, 3vw, 3rem);
+    }
+    &__title {
+        font-size: clamp(3rem, 9vw, 20rem);
+        letter-spacing: -0.5rem;
+        display: inline-block;
+        position: relative;
+
+    }
+    &__TDEE {
+        height: 200vh;
+        width: 100vw;
+        background: #000;
+    }
 }
