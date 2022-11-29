@@ -23,7 +23,6 @@
 
         span {
             font-size: clamp(2rem, 6vw, 11rem);
-
             @include mq(medium) {
                 display: block;
                 text-align: center;
@@ -32,13 +31,15 @@
         }
 
         span:last-child {
+            position: relative;
+            top: -1rem;
             font-size: clamp(2rem, 7vw, 12rem);
 
             @include mq(medium) {
                 display: block;
                 text-align: center;
                 font-size: clamp(2rem, 10vw, 15rem);
-                margin-bottom: 4rem;
+                margin-bottom: 3rem;
             }
         }
     }

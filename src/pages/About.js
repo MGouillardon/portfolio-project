@@ -1,11 +1,10 @@
 export default {
   render: async () => {
     return `
-    <div data-scroll-container>
+  
       <section class="about" id="about">
           
       </section>
-      <div/>
       `;
   },
   after_render: async () => {
@@ -26,8 +25,6 @@ export default {
       menu__overlay.classList.toggle("on");
     });
 
-    let locomotive__import = await import("../scripts/locomotive");
-    let locomotive__scroll = locomotive__import.default;
-    locomotive__scroll();
+
   },
 };

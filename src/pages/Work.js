@@ -1,9 +1,15 @@
+import LocomotiveScroll from 'locomotive-scroll';
+
 export default {
   render: async () => {
     return `
   
       <section class="work" id="work">
-          
+        <div class="work__content">
+          <div data-scroll-container>
+            <div class="test" data-scroll-section><div/>
+          <div/>
+          <div/>
       </section>
       `;
   },
@@ -23,6 +29,10 @@ export default {
       btn.classList.toggle("on");
       menu__list.classList.toggle("on");
       menu__overlay.classList.toggle("on");
+    });
+    const scroll = new LocomotiveScroll({
+        el: document.querySelector('[data-scroll-container]'),
+        smooth: true
     });
   },
 };
