@@ -52,7 +52,7 @@ export default {
     home.innerHTML += navbar.default;
     home.innerHTML += curtain__menu.default;
     let curtain__menu__animation = await import("../scripts/curtain__menu__animation");
-    let toggleCurtainMenu = curtain__menu__animation.default;
+    let toggleCurtainMenu =  curtain__menu__animation.default;
     toggleCurtainMenu();
     let wrapper__animation = await import("../scripts/wrapper__animation");
     console.log(wrapper__animation);
