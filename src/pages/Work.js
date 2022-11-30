@@ -4,25 +4,23 @@ export default {
   render: async () => {
     return `
   
-      <section class="work" id="work">
-        
-      <div data-scroll-container>
-
-      <div class="work__homepage" data-scroll-section>
-        <h1 class="work__title" data-scroll data-scroll-position="top" data-scroll-speed="15">
-          <span data-scroll data-scroll-delay="0.45" data-scroll-speed="4" data-scroll-position="top">W</span>
-          <span data-scroll data-scroll-delay="0.65" data-scroll-speed="4" data-scroll-position="top">O</span>
-          <span data-scroll data-scroll-delay="0.25" data-scroll-speed="4" data-scroll-position="top">R</span>
-          <span data-scroll data-scroll-delay="0.95" data-scroll-speed="4" data-scroll-position="top">K</span>
-        </h1>
-        <div class="work__cta-scroll">SCROLL DOWN</div>
-      <div/>
-      <div class="work__TDEE" data-scroll-section><div/>
-      <div class="work__test" data-scroll-section>test<div/>
-
-    <div/>
+    <div data-scroll-container>
+        <section class="work" id="work" data-scroll-section>
+             
+            <h1 class="work__title">
+              <span data-scroll data-scroll-delay="0.45" data-scroll-speed="4" data-scroll-position="top">W</span>
+              <span data-scroll data-scroll-delay="0.65" data-scroll-speed="1" data-scroll-position="top">O</span>
+              <span data-scroll data-scroll-delay="0.25" data-scroll-speed="8" data-scroll-position="top">R</span>
+              <span data-scroll data-scroll-delay="0.95" data-scroll-speed="4" data-scroll-position="top">K</span>
+            </h1>
+            <div class="work__cta-scroll">SCROLL DOWN</div>
+    
           
-      </section>
+          </section>
+          <div class="work__TDEE" data-scroll-section>salut a tous</div>
+          <div class="work__test" data-scroll-section>
+
+    </div>
       `;
   },
   after_render: async () => {
