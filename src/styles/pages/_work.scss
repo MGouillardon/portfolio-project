@@ -8,9 +8,9 @@
         font-size: clamp(3rem, 9vw, 20rem);
         display: flex;
         position: relative;
-        background: #000;
 
     }
+
     &__cta-scroll {
         position: absolute;
         bottom: 2rem;
@@ -18,12 +18,53 @@
         transform: translateX(-50%);
         font-size: clamp(1.6rem, 3vw, 3rem);
     }
-    &__TDEE {
+
+    &__kluik {
         height: 100vh;
-        background: pink;
+        display: flex;
     }
-    &__test {
-        height: 100vh;
-        background: salmon;
+
+    &__kluik__img__container {
+        width: 50%;
+        @extend %flex-center;
     }
+
+    &__kluik__img {
+        height: 40%;
+        width: 80%;
+        border-radius: 2rem;
+
+        img {
+            border-radius: inherit;
+            background-position: center 0%;
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    &__kluik__desc {
+        width: 50%;
+        @extend %flex-center;
+        flex-direction: column;
+        padding-inline: 5rem;
+        gap: 2rem;
+    }
+
+    &__kluik__title {
+        font-size: clamp(2rem, 7vw, 14rem);
+
+    }
+
+    &__kluik__text{
+        font-size: clamp(2rem, 3vw, 6rem);
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+    }
+    &__kluik__link{
+        font-size: clamp(1.6rem, 3vw, 4rem);
+    }
+
 }

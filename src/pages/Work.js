@@ -17,8 +17,19 @@ export default {
     
           
           </section>
-          <div class="work__TDEE" data-scroll-section>salut a tous</div>
-          <div class="work__test" data-scroll-section>
+          <div class="work__kluik" data-scroll-section>
+            <div class="work__kluik__img__container">
+              <div class="work__kluik__img">
+              <img data-scroll data-scroll-speed="6" src="../../public/kluik.png" alt="kluik project picture">
+              </div>
+            </div>
+            <div class="work__kluik__desc">
+              <div class="work__kluik__title" data-scroll data-scroll-speed="-4" data-scroll-direction="horizontal">KLUIK</div>
+              <div class="work__kluik__text"><span data-scroll data-scroll-speed="6" data-scroll-direction="horizontal">HTML SCSS Website</span>
+              <span data-scroll data-scroll-speed="3" data-scroll-direction="horizontal" >with some JS for basic animation</span> </div>
+              <a class="work__kluik__link" data-scroll data-scroll-speed="4" data-scroll-direction="horizontal" href="http://https://github.com/MGouillardon/Kluik" target="_blank">Github link here</a>
+            </div>
+          </div>
 
     </div>
       `;
