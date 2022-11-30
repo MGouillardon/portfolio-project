@@ -49,6 +49,27 @@
         }
     }
 
+    &__line{
+        flex-grow: 1;
+        margin-inline: 3rem;
+        height: 0.5rem;
+        border-radius: 20rem;
+        background: $primary-text-color;
+        animation: appears 1.5s ease-in-out;
+
+        @include mq(medium) {
+            display: none;
+        }
+    }
+    
+    @keyframes appears {
+        from {
+            transform: scaleX(0);
+        }
+        to{
+            transform: scaleX(1);
+        }
+    }
 
     &__burger-btn {
         display: none;

@@ -1,6 +1,7 @@
 export default `
 <nav class="navbar">
       <div class="navbar__name" id="navbar__name-js">Portfolio 2022</div>
+      <div class="navbar__line"></div>
       <ul class="navbar__list">
         <li class="navbar__item"><a href="#">Home</a></li>
         <li class="navbar__item"><a href="#work">Work</a></li>
