@@ -7,7 +7,7 @@ export default {
       <h1 class="home__title">
         <span>Maxime</span><br /><span>Gouillardon</span>
       </h1>
-      <p class="home__desc">Full stack Web Developer</p>
+      <p class="home__desc">Full Stack Web Developer</p>
     </div>
     <div class="home__right-side">
       <div

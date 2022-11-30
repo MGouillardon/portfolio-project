@@ -5,6 +5,7 @@ export default {
     return `
   
     <div data-scroll-container>
+      
         <section class="work" id="work" data-scroll-section>
              
             <h1 class="work__title">
@@ -62,7 +63,7 @@ export default {
             <div class="work__awesome__desc">
               <div class="work__awesome__title" data-scroll data-scroll-speed="-4" data-scroll-direction="horizontal">Awesome</div>
               <div class="work__awesome__text"><span data-scroll data-scroll-speed="-6" data-scroll-direction="horizontal">OOP PHP Project</span>
-              <span data-scroll data-scroll-speed="-3" data-scroll-direction="horizontal" >e-shop using oop php & vite</span> </div>
+              <span data-scroll data-scroll-speed="-3" data-scroll-direction="horizontal" >E-shop using oop php, Twig & vite</span> </div>
               <a class="work__awesome__link" data-scroll data-scroll-speed="-4" data-scroll-direction="horizontal" href="https://github.com/MGouillardon/e-commerce" target="_blank">Github link here</a>
             </div>
             <div class="work__awesome__img__container">

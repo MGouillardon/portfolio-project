@@ -18,6 +18,7 @@ export default () => {
     { configuration: 2, roundness: 2 },
     { configuration: 2, roundness: 3 },
     { configuration: 3, roundness: 3 },
+    { configuration: 3, roundness: 1 },
   ];
 
   let prev = 0;
