@@ -4,7 +4,9 @@ body {
     background: $primary-background-color;
 
 }
-
+#app {
+    position: relative;
+}
 section {
     background: $primary-background-color;
     min-height: 100vh;

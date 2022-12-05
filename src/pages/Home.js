@@ -1,13 +1,17 @@
+import "splitting/dist/splitting.css";
+import "splitting/dist/splitting-cells.css";
+import Splitting from "splitting";
+
 export default {
   render: async () => {
     return `
 
     <section class="home" id="home">
     <div class="home__left-side">
-      <h1 class="home__title">
-        <span>Maxime</span><br /><span>Gouillardon</span>
+      <h1 class="home__title" data-splitting="chars">
+        <span>Maxime</span><br /> <span>Gouillardon\ </span>
       </h1>
-      <p class="home__desc">Full Stack Web Developer</p>
+      <p data-splitting class="home__desc">Full Stack Web Developer</p>
     </div>
     <div class="home__right-side">
       <div
@@ -46,24 +50,9 @@ export default {
     `;
   },
   after_render: async () => {
-    let navbar = await import("../components/Navbar");
-    let curtain__menu = await import("../components/Curtain__menu");
-    let home = document.getElementById("home");
-    home.innerHTML += navbar.default;
-    home.innerHTML += curtain__menu.default;
-    // let curtain__menu__animation = await import("../scripts/curtain__menu__animation");
-    // let toggleCurtainMenu =  curtain__menu__animation.default;
-    // toggleCurtainMenu();
-    let btn = document.getElementById("burger-btn");
-    let menu__list = document.getElementById("menu__list-js");
-    let menu__overlay = document.getElementById("menu__overlay-js");
-    btn.addEventListener("click", () => {
-      btn.classList.toggle("on");
-      menu__list.classList.toggle("on");
-      menu__overlay.classList.toggle("on");
-    });
     let wrapper__animation = await import("../scripts/wrapper__animation");
     let wrapperAnimation = wrapper__animation.default;
     wrapperAnimation();
+    Splitting();
   },
 };

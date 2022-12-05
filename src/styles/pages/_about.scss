@@ -2,3 +2,11 @@
 @use '../abstracts/mixins' as *;
 
 
+.about {
+    display: grid;
+    place-content: center;
+
+    &__title {
+        font-size: clamp(2rem, 10vw, 15rem);
+    }
+}

@@ -1,12 +1,14 @@
 @use '../abstracts/placeholders' as *;
 @use '../abstracts/colors' as *;
+@use '../abstracts/mixins' as *;
 
 .work {
     display: grid;
     place-content: center;
 
+
     &__title {
-        font-size: clamp(3rem, 9vw, 20rem);
+        font-size: clamp(6rem, 9vw, 20rem);
         display: flex;
         position: relative;
 
@@ -23,17 +25,33 @@
     &__kluik {
         height: 100vh;
         display: flex;
+
+        @include mq(large) {
+            height: 50vh;
+            margin-top: 30vh;
+            flex-direction: column-reverse;
+        }
     }
 
     &__kluik__img__container {
         width: 50%;
         @extend %flex-center;
+
+        @include mq(large) {
+            width: 100%;
+        }
     }
 
     &__kluik__img {
         height: 40%;
         width: 80%;
+        position: relative;
+        z-index: 2;
         border-radius: 2rem;
+
+        @include mq(large) {
+            height: 100%;
+        }
 
         img {
             border-radius: inherit;
@@ -41,6 +59,8 @@
             background-size: cover;
             height: 100%;
             width: 100%;
+            aspect-ratio: 16 / 9;
+            
         }
     }
 
@@ -50,6 +70,11 @@
         flex-direction: column;
         padding-inline: 5rem;
         gap: 2rem;
+
+        @include mq(large) {
+            width: 100%;
+            height: 50vh;
+        }
     }
 
     &__kluik__title {
@@ -57,16 +82,18 @@
 
     }
 
-    &__kluik__text{
+    &__kluik__text {
         font-size: clamp(2rem, 3vw, 6rem);
         display: flex;
         flex-direction: column;
         text-align: center;
 
     }
-    &__kluik__link{
+
+    &__kluik__link {
         font-size: clamp(1.6rem, 3vw, 4rem);
         position: relative;
+
         &::after {
             content: "";
             background: $secondary-background-color;
@@ -87,17 +114,38 @@
     &__TDEE {
         height: 100vh;
         display: flex;
+
+        @include mq(large) {
+            flex-direction: column;
+            height: 50vh;
+            margin-top: 30vh;
+            gap: 10vh;
+
+
+        }
     }
 
     &__TDEE__img__container {
         width: 50%;
         @extend %flex-center;
+
+        @include mq(large) {
+            width: 100%;
+
+        }
     }
 
     &__TDEE__img {
         height: 40%;
         width: 80%;
         border-radius: 2rem;
+        position: relative;
+        z-index: 2;
+
+        @include mq(large) {
+            height: 100%;
+
+        }
 
         img {
             border-radius: inherit;
@@ -105,6 +153,7 @@
             background-size: cover;
             height: 100%;
             width: 100%;
+            aspect-ratio: 16 / 9;
         }
     }
 
@@ -114,6 +163,11 @@
         flex-direction: column;
         padding-inline: 5rem;
         gap: 2rem;
+
+        @include mq(large) {
+            width: 100%;
+
+        }
     }
 
     &__TDEE__title {
@@ -121,16 +175,18 @@
 
     }
 
-    &__TDEE__text{
+    &__TDEE__text {
         font-size: clamp(2rem, 3vw, 6rem);
         display: flex;
         flex-direction: column;
         text-align: center;
 
     }
-    &__TDEE__link{
+
+    &__TDEE__link {
         font-size: clamp(1.6rem, 3vw, 4rem);
         position: relative;
+
         &::after {
             content: "";
             background: $secondary-background-color;
@@ -147,21 +203,43 @@
             height: 100%;
         }
     }
+
     &__quizzos {
         height: 100vh;
         margin-bottom: 20vh;
         display: flex;
+
+        @include mq(large) {
+            flex-direction: column-reverse;
+            height: 50vh;
+            gap: 10vh;
+            margin-top: 30vh;
+
+
+        }
     }
 
     &__quizzos__img__container {
         width: 50%;
         @extend %flex-center;
+
+        @include mq(large) {
+            width: 100%;
+
+        }
     }
 
     &__quizzos__img {
         height: 40%;
         width: 95%;
+        position: relative;
+        z-index: 2;
         border-radius: 2rem;
+
+        @include mq(large) {
+            height: 100%;
+
+        }
 
         img {
             border-radius: inherit;
@@ -169,6 +247,7 @@
             background-size: cover;
             height: 100%;
             width: 100%;
+            aspect-ratio: 16 / 9;
         }
     }
 
@@ -178,6 +257,11 @@
         flex-direction: column;
         padding-inline: 5rem;
         gap: 2rem;
+
+        @include mq(large) {
+            width: 100%;
+
+        }
     }
 
     &__quizzos__title {
@@ -185,16 +269,18 @@
 
     }
 
-    &__quizzos__text{
+    &__quizzos__text {
         font-size: clamp(2rem, 3vw, 6rem);
         display: flex;
         flex-direction: column;
         text-align: center;
 
     }
-    &__quizzos__link{
+
+    &__quizzos__link {
         font-size: clamp(1.6rem, 3vw, 4rem);
         position: relative;
+
         &::after {
             content: "";
             background: $secondary-background-color;
@@ -211,20 +297,42 @@
             height: 100%;
         }
     }
+
     &__awesome {
         height: 100vh;
         display: flex;
+
+        @include mq(large) {
+            flex-direction: column;
+            height: 50vh;
+            gap: 10vh;
+            margin-bottom: 20vh;
+
+        }
     }
 
     &__awesome__img__container {
         width: 50%;
         @extend %flex-center;
+
+        @include mq(large) {
+            width: 100%;
+            margin-bottom: 20vh;
+            
+        }
     }
 
     &__awesome__img {
         height: 40%;
         width: 80%;
+        position: relative;
+        z-index: 2;
         border-radius: 2rem;
+
+        @include mq(large) {
+            height: 100%;
+            
+        }
 
         img {
             border-radius: inherit;
@@ -241,6 +349,12 @@
         flex-direction: column;
         padding-inline: 5rem;
         gap: 2rem;
+
+        @include mq(large) {
+            width: 100%;
+            height: 50vh;
+
+        }
     }
 
     &__awesome__title {
@@ -248,16 +362,18 @@
 
     }
 
-    &__awesome__text{
+    &__awesome__text {
         font-size: clamp(2rem, 3vw, 6rem);
         display: flex;
         flex-direction: column;
         text-align: center;
 
     }
-    &__awesome__link{
+
+    &__awesome__link {
         font-size: clamp(1.6rem, 3vw, 4rem);
         position: relative;
+
         &::after {
             content: "";
             background: $secondary-background-color;
